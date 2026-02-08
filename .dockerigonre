@@ -1,0 +1,13 @@
+venv
+data
+notebooks
+__pycache__
+.git
+
+# Python cache files
+*.pyc
+*.pyo
+
+# Editor files
+.vscode
+.DS_Store
