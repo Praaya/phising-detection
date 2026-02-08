@@ -1,0 +1,93 @@
+PHISHING DETECTION PROJECT — TEAM SETUP GUIDE
+=============================================
+
+Follow these steps after cloning the repository.
+
+---------------------------------------------
+STEP 1 — Clone the Repository
+---------------------------------------------
+git clone https://github.com/YOUR-USERNAME/phishing-detection.git
+cd phishing-detection
+
+
+---------------------------------------------
+STEP 2 — Create Virtual Environment
+---------------------------------------------
+python -m venv venv
+
+
+---------------------------------------------
+STEP 3 — Activate Virtual Environment
+---------------------------------------------
+
+Linux/Mac:
+source venv/bin/activate
+
+Windows:
+venv\Scripts\activate
+
+You should see (venv) in the terminal.
+
+
+---------------------------------------------
+STEP 4 — Install Dependencies
+---------------------------------------------
+pip install -r requirements.txt
+
+
+---------------------------------------------
+STEP 5 — Run the Backend Server
+---------------------------------------------
+uvicorn backend.main:app --reload
+
+Open in browser:
+http://127.0.0.1:8000
+
+
+---------------------------------------------
+ADDING NEW PACKAGES (IMPORTANT)
+---------------------------------------------
+If you need a new package:
+
+1) Install it locally
+   pip install package-name
+
+2) Inform the dependency manager
+
+3) Only the dependency manager updates:
+   pip freeze > requirements.txt
+   git add requirements.txt
+   git commit -m "Added dependency"
+   git push
+
+
+---------------------------------------------
+UPDATING YOUR PROJECT
+---------------------------------------------
+Always pull latest changes before working:
+
+git pull
+
+
+---------------------------------------------
+COMMON RULES
+---------------------------------------------
+- Always activate venv before working
+- Never install packages globally
+- Do not modify requirements.txt randomly
+- Pull before pushing changes
+
+
+---------------------------------------------
+IF SOMETHING BREAKS
+---------------------------------------------
+Delete and recreate venv:
+
+rm -rf venv
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+---------------------------------------------
+
+Happy Coding!
